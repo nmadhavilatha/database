@@ -1,0 +1,10 @@
+{
+ "jobCode" : "J001",
+ "jobTitle" : "Principal",
+ "jobDescription" : "Principal",
+ "minQualification" : "Ph.D",
+ "empClass" : "Faculty",
+ "minSalary" : 140000,
+ "maxSalary" : 190000,
+ "flagStatus" : "Salaried (Exempt)"
+}

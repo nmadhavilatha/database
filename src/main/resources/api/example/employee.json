@@ -1,0 +1,13 @@
+{
+   "empId" : "E00001",
+   "nationalIDNumber" : "111-11-1111",
+   "eName" : "Mr Jon Doe",
+   "addressLn" : "1 Area",
+   "addressCity" : "Atlanta",
+   "addressZIP" : "30303",
+   "addressState" : "GA",
+   "addressCountry" : "USA",
+   "phone" : "9999999999",
+   "gender" : "Male",
+   "birthDate" : "1977-01-19"
+}

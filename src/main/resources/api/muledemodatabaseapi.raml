@@ -1,0 +1,60 @@
+#%RAML 1.0
+title: MuledemodatabaseApi
+version: 1.0
+protocols: [ HTTPS ]
+mediaType: application/json
+traits: !include common/common-traits.yaml
+documentation:
+ - title: Mule Demo Database API.
+   content: !include documentation/doc.md
+types:
+  employee: !include schema/employee.raml
+  job: !include schema/job.raml
+/employee:
+ post:
+   is: [handlesAllErrors,clientIdRequired]
+   description: Create new Employee
+   body:
+     application/json:
+       example: !include example/employees.json
+       type: employee[]
+   responses:
+     200:
+       body:
+         application/json:
+           example:
+             status: success
+ /{empId}:
+   get:
+     is: [handlesAllErrors, clientIdRequired]
+     description:   Get employee with employee Id.
+     responses:
+       200:
+         body:
+           application/json:
+             example: !include example/employee.json
+             type: employee
+/job:
+ post:
+   is: [handlesAllErrors,clientIdRequired]
+   description: Create new Job
+   body:
+     application/json:
+       example: !include example/jobs.json
+       type: job[]
+   responses:
+     200:
+       body:
+         application/json:
+           example:
+             status: success
+ /{jobCode}:
+   get:
+     is: [handlesAllErrors, clientIdRequired]
+     description:   Get Job by Job Code.
+     responses:
+       200:
+         body:
+           application/json:
+             example: !include example/job.json
+             type: job
