@@ -1,0 +1,24 @@
+handlesAllErrors:
+ responses:
+   500:
+     description: Error response to indicate internal API error.
+     body:
+       application/json:
+         example: 
+           error: system_exception
+           description: System Exception Occurred
+   403:
+     description: Authentication error response.
+     body:
+       application/json:
+         example: 
+          error: invalid_client
+          description: InvalidClientIdorClientsecret     
+clientIdRequired:
+   headers:
+    client_id:
+      displayName: Client ID
+      type: string
+    client_secret:
+      displayName: Shared Secret
+      type: string
